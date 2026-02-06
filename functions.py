@@ -28,16 +28,18 @@ def check_number(number):
         return 'the number is zero'
 print(check_number(7))
 
+def bmi(weight, height):
+    value = weight / (height ** 2)
 
-def bmi(weight,height):
-   return weight / (height ** 2)
+    if value <= 18.5:
+        print("you are underweight")
+    elif value <= 24.9:
+        print("you are normal weight")
+    elif value <= 29.9:
+        print("you are overweight")
+    else:
+        print("you are obese")
 
-print(bmi(64,1.345))
-if bmi() <= 18.5:
-    print("you are underweight")
-elif bmi() > 18.5 and bmi() <= 24.9:
-    print("you are normalweight")
-elif bmi() > 25.0 and bmi() <= 29.9:
-    print("you are overweight")
-elif bmi() >= 30:
-    print("you are obese")
+    return value
+
+print(bmi(67, 1.65))
